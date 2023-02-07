@@ -1,2 +1,2 @@
 # Antwa-sensei253.github.io
-go to hell
+go to ....
