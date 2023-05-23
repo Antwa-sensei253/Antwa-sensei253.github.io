@@ -1,3 +1,23 @@
+<?php
+include('connection.php');
+if (isset($_POST['submit'])) {
+  if ($conn -> connect_error) {
+  }else{
+      $name=$_POST['name'];
+      $email=$_POST['email'];
+      $password=$_POST['password'];
+      $confirm=$_POST['confirm'];
+      $sql =" INSERT INTO `user`(`name`, `email`, `password`, `confirm`) VALUES ('$name','$email','$password','$confirm')";
+      mysqli_query($conn, $sql);
+
+      
+      
+
+  }
+}
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
   <html>
@@ -20,24 +40,33 @@
     </head>
 
     <body class="body">
-     
 
       <div class="login-page">
-        <div class="form">
+        <form class="form" method="post";>
           <form>
+          
             <img src="3127336.png"></img>
-            <input type="text"  placeholder="username" required/>
-            <input type="email"  placeholder="email address" required />
-            <input type="password" placeholder="password" required />
+            <br>
+
+            <?php
+            if (isset($error)) {
+              echo($error);
+            }
+            ?>
+            <input type="text" name="name" placeholder="username" required/>
+            <input type="email" name="email" placeholder="email address" required />
+            <input type="password" name="password" placeholder="password" required />
+            <input type="password" name="confirm" placeholder="confirm password" required />
             <i class="fas fa-eye" onclick="show()"></i>
+            <button type="submit" name="submit">submit</button>
+            <button type="button" onclick="window.location.href='login.html'">SIGN UP</button>
+
             <br>
             <br>
           </form>
 
           <form class="login-form">
-            <button type="button" onclick="window.location.href='login.html'">
-              SIGN UP
-            </button>
+            
           </form>
         </div>
       </div>
@@ -46,8 +75,6 @@
       function show() {
         var password = document.getElementById("password");
         var icon = document.querySelector(".fas");
-
-        // ========== Checking type of password ===========
         if (password.type === "password") {
           password.type = "text";
         } else {
