@@ -1,0 +1,44 @@
+
+
+#main{
+    width: 50%;
+    font-size: 35px;
+   justify-content: center;
+   margin: 0 auto;
+    display: flex;
+    background-color: rgb(152, 174, 187);
+    border-radius: 30px;
+    padding:0 100px;
+    
+}
+
+section{
+    width: 256px;
+}
+
+a{
+    text-decoration:none;
+    font-weight: bold;
+    color: rgb(0, 16, 104);
+    /* box-shadow: 5px 10px #888888; */
+
+}
+
+.logo{
+    direction: rtl;
+}
+html{
+    text-align: center;
+ 
+}
+
+
+.Links{
+    width: 10px;
+    margin-left: 3px;
+    direction:rtl;
+}
+
+header{
+    width: 128px;
+}
