@@ -1,44 +1,65 @@
-
-
-#main{
-    width: 50%;
-    font-size: 35px;
-   justify-content: center;
-   margin: 0 auto;
-    display: flex;
-    background-color: rgb(152, 174, 187);
-    border-radius: 30px;
-    padding:0 100px;
-    
+body {
+    direction: rtl;
+    margin: 0;
 }
 
-section{
+header {
+    background-color: #c6c6c6;
+    padding-right: 20px;
+    padding-left: 20px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+header>h1 {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 36px;
+    color: rgb(31, 54, 115);
+}
+
+nav>ul {
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+}
+
+nav>ul>li {
+    padding-left: 20px;
+    padding-right: 20px;
+    font-size: 28px;
+}
+
+nav a {
+    color: black;
+}
+
+#main {
+    font-size: 35px;
+    justify-content: center;
+    margin: 0 auto;
+    display: flex;
+    background-color: rgb(152, 174, 187);
+    padding: 0 100px;
+}
+
+section {
     width: 256px;
 }
 
-a{
-    text-decoration:none;
+a {
+    text-decoration: none;
     font-weight: bold;
     color: rgb(0, 16, 104);
     /* box-shadow: 5px 10px #888888; */
-
 }
 
-.logo{
+.logo {
     direction: rtl;
 }
-html{
-    text-align: center;
- 
-}
 
-
-.Links{
+.Links {
     width: 10px;
     margin-left: 3px;
-    direction:rtl;
-}
-
-header{
-    width: 128px;
+    direction: rtl;
 }
