@@ -8,7 +8,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>مواقع الخدمات الحكومية</title>
-    <link rel="stylesheet" href="CSS/Style.css">
+    <link rel="stylesheet" href="styles/Style.css">
+    <link rel="stylesheet" href="styles/tabs.css">
     <link rel="icon" href="Image/Logo.png" type="image/png">
 
 
@@ -27,14 +28,15 @@
         </nav>
     </header>
 
-    <div id="main">
-        <div class="Logo">
-            <!-- <h1>ساعد النماء</h1> -->
-            <br><br>
+    <section>
+        <div class="tab">
+            <button class="tablinks" id="defaultTab" onclick="openService(event, 'Supports')">برامج الدعم</button>
+            <button class="tablinks" onclick="openService(event, 'Courts')">محاكم ومشاكل</button>
+            <button class="tablinks" onclick="openService(event, 'Banks')">البنوك</button>
+            <button class="tablinks" onclick="openService(event, 'Labours')">العمال والمؤسسات</button>
+            <button class="tablinks" onclick="openService(event, 'General')">خدمات عامة</button>
         </div>
-        <section class="Supports">
-            <h3>برامج الدعم</h3>
-
+        <div id="Supports" class="tabcontent">
             <a target="_blank" class="Links" href="https://sbis.hrsd.gov.sa/#/login">الضمان الإجتماعي</a>
             <br><br>
             <a target="_blank" class="Links" href="https://portal.ca.gov.sa/">حساب المواطن</a>
@@ -45,20 +47,18 @@
             <br><br>
             <a target="_blank" href="https://portal.mewa.gov.sa/#/login.html">دعم الماشية</a>
             <br><br><br>
-        </section>
+        </div>
 
-        <section class="Court">
-            <h3>محاكم ومشاكل</h3>
+        <div id="Courts" class="tabcontent">
             <a target="_blank" class="Links" href="https://www.najiz.sa/">ناجز</a>
             <br><br>
             <a target="_blank" class="Links" href="https://inhaatportal.moj.gov.sa/">انهاءات</a>
             <br><br>
             <a target="_blank" class="Links" href="https://taradhi.moj.gov.sa/">تراضي</a>
             <br><br><br>
-        </section>
+        </div>
 
-        <section class="Banks">
-            <h3>البنوك</h3>
+        <div id="Banks" class="tabcontent">
             <div class="Banks">
                 <a target="_blank" class="Links" href="https://len.sdb.gov.sa/">بنك التنمية الاجتماعية</a>
                 <br><br>
@@ -71,10 +71,9 @@
                 <a target="_blank" class="Links" href="Pages/Tadawoul.html">تداول</a>
             </div>
             <br><br><br>
-        </section>
+        </div>
 
-        <section class="Labours">
-            <h3>العمال والمؤسسات</h3>
+        <div id="Labours" class="tabcontent">
             <a target="_blank" class="Links" href="https://portal.qiwa.sa/">قوى</a>
             <br><br>
             <a target="_blank" class="Links" href="https://mudad.com.sa/landing-page/home">مدد</a>
@@ -87,10 +86,9 @@
             <br><br>
             <a target="_blank" href="https://www.saudibusiness.gov.sa/Identity/Account/Login">المركز الوطني للإعمال</a>
             <br><br><br>
-        </section>
+        </div>
 
-        <section class="Global">
-            <h3>خدمات عامة</h3>
+        <div id="General" class="tabcontent">
             <a target="_blank" class="Links" href="https://www.absher.sa/portal/landing.html">أبشر</a>
             <br><br>
             <a target="_blank" class="Links" href="https://www.ewdifh.com/">أي وظيفة</a>
@@ -109,9 +107,15 @@
             <br><br>
             <a target="_blank" class="Links" href="https://jadarat.sa/">جدارات</a>
             <br><br><br>
-        </section>
+        </div>
 
-    </div>
+    </section>
+
+
+    <script src="scripts/tabs.js"></script>
+    <script>
+        document.getElementById("defaultTab").click();
+    </script>
 </body>
 
 </html>
