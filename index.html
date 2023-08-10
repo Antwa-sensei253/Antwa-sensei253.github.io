@@ -28,7 +28,7 @@
         </nav>
     </header>
 
-    <section>
+    <section id="government-services">
         <div class="tab">
             <button class="tablinks" id="defaultTab" onclick="openService(event, 'Supports')">برامج الدعم</button>
             <button class="tablinks" onclick="openService(event, 'Courts')">محاكم ومشاكل</button>
@@ -36,85 +36,24 @@
             <button class="tablinks" onclick="openService(event, 'Labours')">العمال والمؤسسات</button>
             <button class="tablinks" onclick="openService(event, 'General')">خدمات عامة</button>
         </div>
-        <div id="Supports" class="tabcontent">
-            <a target="_blank" class="Links" href="https://sbis.hrsd.gov.sa/#/login">الضمان الإجتماعي</a>
-            <br><br>
-            <a target="_blank" class="Links" href="https://portal.ca.gov.sa/">حساب المواطن</a>
-            <br><br>
-            <a target="_blank" class="Links" href="https://portal.ca.gov.sa/">طاقات</a>
-            <br><br>
-            <a target="_blank" class="Links" href="https://reef.gov.sa/">ريف</a>
-            <br><br>
-            <a target="_blank" href="https://portal.mewa.gov.sa/#/login.html">دعم الماشية</a>
-            <br><br><br>
-        </div>
 
-        <div id="Courts" class="tabcontent">
-            <a target="_blank" class="Links" href="https://www.najiz.sa/">ناجز</a>
-            <br><br>
-            <a target="_blank" class="Links" href="https://inhaatportal.moj.gov.sa/">انهاءات</a>
-            <br><br>
-            <a target="_blank" class="Links" href="https://taradhi.moj.gov.sa/">تراضي</a>
-            <br><br><br>
-        </div>
-
-        <div id="Banks" class="tabcontent">
-            <div class="Banks">
-                <a target="_blank" class="Links" href="https://len.sdb.gov.sa/">بنك التنمية الاجتماعية</a>
-                <br><br>
-                <a target="_blank" href="https://freelance.sa/login">العمل الحر</a>
-                <br><br>
-                <a target="_blank" class="Links" href="https://eservice.alrajhibank.com.sa/AOW/ar/Wizard/Index">بنك الراجحي</a> <br>
-                <br><br>
-                <a target="_blank" class="Links" href="https://new.alahlionline.com/account-opening/#/registration/onlineAccountOpening-personal">بنك الأهلي</a>
-                <br><br>
-                <a target="_blank" class="Links" href="Pages/Tadawoul.html">تداول</a>
-            </div>
-            <br><br><br>
-        </div>
-
-        <div id="Labours" class="tabcontent">
-            <a target="_blank" class="Links" href="https://portal.qiwa.sa/">قوى</a>
-            <br><br>
-            <a target="_blank" class="Links" href="https://mudad.com.sa/landing-page/home">مدد</a>
-            <br><br>
-            <a target="_blank" href="https://www.gosi.gov.sa/ar/Login">التأمينات الإجتماعية</a>
-            <br><br>
-            <a target="_blank" href="https://www.mol.gov.sa/securessl/login.aspx">وزارة العمل</a>
-            <br><br>
-            <a target="_blank" href="https://ecr.mc.gov.sa/Land?returnUrl=%2F">وزارة التجارة</a>
-            <br><br>
-            <a target="_blank" href="https://www.saudibusiness.gov.sa/Identity/Account/Login">المركز الوطني للإعمال</a>
-            <br><br><br>
-        </div>
-
-        <div id="General" class="tabcontent">
-            <a target="_blank" class="Links" href="https://www.absher.sa/portal/landing.html">أبشر</a>
-            <br><br>
-            <a target="_blank" class="Links" href="https://www.ewdifh.com/">أي وظيفة</a>
-            <br><br>
-            <a target="_blank" class="Links" href="https://www.nwc.com.sa/AR/Pages/default.aspx/">وزارة المياة</a>
-            <br><br>
-            <a target="_blank" class="Links" href="https://www.mof.gov.sa/Pages/default.aspx">وزارة المالية</a>
-            <br><br>
-            <a target="_blank" class="Links" href="https://sakani.sa/app/authentication/login">سكني</a>
-            <br><br>
-            <a target="_blank" class="Links" href="https://www.se.com.sa/">كهرباء</a>
-            <br><br>
-            <a target="_blank" class="Links" href="https://tajnidreg.mod.gov.sa/Profile/Login.aspx">وزارة الدفاع</a>
-            <br><br>
-            <a target="_blank" class="Links" href="https://mcj.sa/">عنايتي</a>
-            <br><br>
-            <a target="_blank" class="Links" href="https://jadarat.sa/">جدارات</a>
-            <br><br><br>
-        </div>
-
+        <div id="Supports" class="tabcontent"></div>
+        <div id="Courts" class="tabcontent"></div>
+        <div id="Banks" class="tabcontent"></div>
+        <div id="Labours" class="tabcontent"></div>
+        <div id="General" class="tabcontent"></div>
     </section>
 
 
     <script src="scripts/tabs.js"></script>
+    <script src="scripts/gov-service-manager.js"></script>
     <script>
         document.getElementById("defaultTab").click();
+        QueryService('Courts');
+        QueryService('Banks');
+        QueryService('Labours');
+        QueryService('General');
+        QueryService('Supports');
     </script>
 </body>
 
