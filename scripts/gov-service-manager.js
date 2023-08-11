@@ -5,9 +5,6 @@ function QueryService(id) {
             document.getElementById(id).innerHTML = this.responseText;
         }
     };
-    xhttp.open("GET", "scripts/get-gov-services.php?id='" + id + "'", true);
+    xhttp.open("GET", "../scripts/get-gov-services.php?id='" + id + "'", true);
     xhttp.send();
-
-
-
 }

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3762689983352985" crossorigin="anonymous"></script>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>مواقع الخدمات الحكومية</title>
+    <link rel="stylesheet" href="../styles/Style.css">
+    <link rel="stylesheet" href="../styles/tabs.css">
+    <link rel="icon" href="../Image/Logo.png" type="image/png">
+
+
+</head>
+
+<body>
+    <header>
+        <h1>مدونة</h1>
+        <nav>
+            <ul>
+                <li><a href="../index.html">الرئيسية</a></li>
+                <li><a href="">عن مدونة</a></li>
+                <li><a href="">تواصل معنا</a></li>
+                <li class="selected"><a href="">خدماتنا </a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="government-services">
+        <div class="tab">
+            <button class="tablinks" id="defaultTab" onclick="openService(event, 'Supports')">برامج الدعم</button>
+            <button class="tablinks" onclick="openService(event, 'Courts')">محاكم ومشاكل</button>
+            <button class="tablinks" onclick="openService(event, 'Banks')">البنوك</button>
+            <button class="tablinks" onclick="openService(event, 'Labours')">العمال والمؤسسات</button>
+            <button class="tablinks" onclick="openService(event, 'General')">خدمات عامة</button>
+        </div>
+
+        <div id="Supports" class="tabcontent"></div>
+        <div id="Courts" class="tabcontent"></div>
+        <div id="Banks" class="tabcontent"></div>
+        <div id="Labours" class="tabcontent"></div>
+        <div id="General" class="tabcontent"></div>
+    </section>
+
+
+    <script src="../scripts/tabs.js"></script>
+    <script src="../scripts/gov-service-manager.js"></script>
+    <script>
+        document.getElementById("defaultTab").click();
+        QueryService('Courts');
+        QueryService('Banks');
+        QueryService('Labours');
+        QueryService('General');
+        QueryService('Supports');
+    </script>
+</body>
+
+</html>
